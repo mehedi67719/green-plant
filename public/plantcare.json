@@ -1,0 +1,21 @@
+
+[
+  {
+    "id": 1,
+    "title": "Watering Wisdom",
+    "icon": "💧",
+    "description": "Always check the top inch of soil before watering. If it feels dry, it's time to water; if damp, wait another day or two. Overwatering is the number one plant killer!"
+  },
+  {
+    "id": 2,
+    "title": "Sunlight Secrets",
+    "icon": "☀️",
+    "description": "Most indoor plants thrive in bright, indirect light. Direct midday sun can scorch leaves. Rotate your plants weekly for even growth and shape."
+  },
+  {
+    "id": 3,
+    "title": "Fertilizing Frequency",
+    "icon": "🪴",
+    "description": "Feed your plants primarily during the spring and summer growing seasons. Use a balanced liquid fertilizer at half-strength every 4-6 weeks, and skip it in winter."
+  }
+]
