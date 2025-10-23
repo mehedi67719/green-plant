@@ -42,6 +42,7 @@ const Register = () => {
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
          <form onSubmit={handelregister}>
+          <h2 className='text-2xl font-bold text-center'>signup </h2>
             <fieldset className="fieldset">
               <label className="label">Name</label>
               <input type="text" className="input" name='name' placeholder="Name" />

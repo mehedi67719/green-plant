@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaRegStar } from "react-icons/fa";
+import { NavLink } from 'react-router';
 
 const AllPlantCard = () => {
   const [plants, setPlants] = useState([]);
@@ -34,9 +35,11 @@ const AllPlantCard = () => {
                 <FaRegStar className="mr-1"/> {plant.rating}
               </p>
             </div>
-            <button className="mt-3 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
-              View Details
-            </button>
+             <NavLink to={`/plant/${plant.plantId}`}>
+                   <button className="mt-3 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
+                   View Details
+                 </button>
+             </NavLink>
           </div>
         </div>
       ))}

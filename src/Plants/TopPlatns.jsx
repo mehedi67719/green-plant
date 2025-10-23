@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaRegStar } from "react-icons/fa";
+import { NavLink } from 'react-router';
 const TopPlatns = ({plant}) => {
   
 
@@ -24,9 +25,11 @@ const TopPlatns = ({plant}) => {
         <p className="text-yellow-500 mt-1 flex items-center font-bold"><FaRegStar /> {plant.rating}</p>
         </div>
 
-        <button className="mt-3 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
-          View Details
-        </button>
+        <NavLink to={`/plant/${plant.plantId}`}>
+            <button className="mt-3 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition">
+            View Details
+          </button>
+        </NavLink>
       </div>
     </div>
     );

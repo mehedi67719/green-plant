@@ -12,6 +12,7 @@ import Register from './login-register/Register.jsx';
 import Authprovider from './authprovider/Authprovider.jsx';
 import Privaterouter from './privaterouter/Privaterouter.jsx';
 import Userinfo from './userinfo/Userinfo.jsx';
+import Plantsdetels from './plantdetels/Plantsdetels.jsx';
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       ,{
         path:'/userinfo',
         element:<Privaterouter><Userinfo></Userinfo></Privaterouter>
+      },
+      {
+        path:'/plant/:id',
+        element:<Privaterouter><Plantsdetels></Plantsdetels></Privaterouter>
       }
     ],
   },
