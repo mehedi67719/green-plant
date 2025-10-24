@@ -12,7 +12,7 @@ const Footer = () => {
 
 
     return (
-        <footer className="bg-green-800 text-white py-10 px-4 md:px-12">
+        <footer className="bg-green-800 text-white pt-10 px-4 md:px-12">
             <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-green-700 pb-8">
                 
             

@@ -1,6 +1,4 @@
-
-
-  import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import { FaRegStar } from "react-icons/fa";
 import { useParams } from "react-router";
 import { useEffect, useState } from 'react';

@@ -1,16 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { FaRegStar } from "react-icons/fa";
 import { NavLink } from 'react-router';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const AllPlantCard = () => {
   const [plants, setPlants] = useState([]);
+  const [loading,setloding]=useState(true);
 
   useEffect(() => {
     fetch('/plants.json')
       .then(res => res.json())
-      .then(data => setPlants(data))
+      .then(data => {setPlants(data)
+        setloding(false)
+      })
+      
       .catch(err => console.log(err));
   }, []);
+
+if(loading){
+  return <LoadingSpinner></LoadingSpinner>
+}
 
   return (
   <div>

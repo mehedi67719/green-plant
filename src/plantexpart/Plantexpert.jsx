@@ -1,17 +1,26 @@
 import React, { useEffect, useState } from 'react';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 
 
 const Plantexpert = () => {
 
-
+const [loading,setloading]=useState(true);
 const [experts,setexperts]=useState([])
 
      useEffect(() => {
   fetch('/plantexpert.json')
     .then(res => res.json())
-    .then(data => setexperts(data))
+    .then(data => {
+      setexperts(data)
+      setloading(false)
+    })
 }, []);
+
+
+if(loading){
+  return <LoadingSpinner></LoadingSpinner>
+}
 
 return(
 <section className="py-16 px-4 md:px-12 bg-white">

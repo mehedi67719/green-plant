@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Root from './root/Root.jsx';
 import Home from './Home/Home.jsx';
@@ -13,6 +13,9 @@ import Authprovider from './authprovider/Authprovider.jsx';
 import Privaterouter from './privaterouter/Privaterouter.jsx';
 import Userinfo from './userinfo/Userinfo.jsx';
 import Plantsdetels from './plantdetels/Plantsdetels.jsx';
+import Forget from './login-register/Forget.jsx';
+
+
 
 
 const router = createBrowserRouter([
@@ -20,6 +23,12 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     children: [
+      {
+        index:true,
+        element: <Navigate to="/home" replace />
+
+
+      },
       {
         path: "/home",
         element: <Privaterouter><Home /></Privaterouter>,
@@ -35,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path:'/forget',
+        element:<Forget />
       }
       ,{
         path:'/userinfo',

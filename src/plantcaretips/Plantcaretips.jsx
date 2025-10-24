@@ -1,15 +1,28 @@
 import React, { useEffect, useState } from 'react';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const Plantcaretips = () => {
  const [careTips,setcareTips]=useState([])
+ const [loading,setloading]=useState(true);
 
 
     useEffect(() => {
   fetch('/plantcare.json') 
     .then(res => res.json()) 
-    .then(data => setcareTips(data)) 
+    .then(data => {
+        setcareTips(data)
+        setloading(false)
+
+    }) 
    
 }, []);
+
+
+if(loading){
+    return <LoadingSpinner></LoadingSpinner>
+}
+
+
     return (
 <section className="py-20 px-4 md:px-12 bg-gray-50">
             <div className="max-w-6xl mx-auto">
