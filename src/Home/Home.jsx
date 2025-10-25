@@ -5,6 +5,7 @@ import Plantcaretips from '../plantcaretips/Plantcaretips';
 
 import Allplants from '../Plants/Allplants';
 
+
 const Home = () => {
     return (
        <>
@@ -12,6 +13,7 @@ const Home = () => {
         <Allplants></Allplants>
         <Plantcaretips></Plantcaretips>
         <Plantexpert></Plantexpert>
+        
        </>
     );
 };

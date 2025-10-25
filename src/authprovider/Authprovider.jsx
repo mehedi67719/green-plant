@@ -39,6 +39,7 @@ const singinwithgoogle=()=>{
     signin,
     user,
     loader,
+    setUser,
     resetpassword,
     singinwithgoogle,
 

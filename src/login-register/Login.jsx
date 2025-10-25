@@ -1,7 +1,7 @@
 import React, { use, useState } from 'react';
 import { Form, Navigate, NavLink, useNavigate } from 'react-router';
 import { Authcontext } from '../authcontext/Authcontext';
-  import { ToastContainer, toast } from 'react-toastify';
+  import {  toast } from 'react-toastify';
    import { FaRegEye } from "react-icons/fa";
  import { FaEyeSlash } from "react-icons/fa";
 
@@ -24,6 +24,7 @@ const  handleicon=()=>{
         const password=e.target.password.value;
         signin(email,password)
         .then(() => {
+          toast('Login Successful');
         navigate('/home', { replace: true }); 
         })
         .then(result=>
@@ -69,7 +70,7 @@ const  handleicon=()=>{
       </div>
     </div>
   </div>
-  <ToastContainer />
+  
 </div>
     );
 };

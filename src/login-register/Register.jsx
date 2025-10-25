@@ -74,7 +74,7 @@ const Register = () => {
    const handelgoogle=()=>{
           singinwithgoogle()
           .then(()=>{
-          
+          toast('Register Successful')
             navigate('/home', { replace: true });
             
           })
@@ -125,7 +125,7 @@ const Register = () => {
       </div>
     </div>
   </div>
-  <ToastContainer />
+ 
 </div>
     );
 };
